@@ -5,7 +5,7 @@ resource "helm_release" "helm_chart" {
   name             = var.chart_name
   version          = var.helm_version
   verify           = var.verify
-  repository       = "https://prometheus-community.github.io/helm-charts"
+  repository       = "https://kubernetes.github.io/dashboard/"
 
   values = [
     file("${path.module}/values.yaml"),
